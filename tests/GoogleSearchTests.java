@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -25,7 +26,7 @@ public class GoogleSearchTests extends BasePage{
 		
 		googleSearchLandingPage.waitForTime(3000);
 		
-		googleSearchLandingPage.verifyByLinkText("Selenium - Web Browser Automation");
+		Assert.assertTrue(googleSearchLandingPage.verifyByLinkText("Selenium - Web Browser Automation"));
 		
 	}
 }
